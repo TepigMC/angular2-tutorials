@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class KeyUpComponent_v1 {
   values = '';
-  
+
   // without strong typing
   /*onKey(event: any) {
     this.values += event.target.value + ' | ';
