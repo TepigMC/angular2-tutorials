@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'key-up',
+  selector: 'key-up1',
   template: `
     <input (keyup)="onKey($event)">
     <p>{{values}}</p>
@@ -9,17 +9,19 @@ import { Component } from '@angular/core';
 })
 export class KeyUpComponent_v1 {
   values = '';
-
+  
   // without strong typing
-  onKey(event: any) {
+  /*onKey(event: any) {
     this.values += event.target.value + ' | ';
-  }
+  }*/
 
   // with strong typing
-  /*onKey(event:KeyboardEvent) {
+  onKey(event: KeyboardEvent) {
     this.values += (<HTMLInputElement>event.target).value + ' | ';
-  }*/
+  }
 }
+
+//////////////////////////////////////////
 
 @Component({
   selector: 'key-up2',
@@ -36,6 +38,8 @@ export class KeyUpComponent_v2 {
   }
 }
 
+//////////////////////////////////////////
+
 @Component({
   selector: 'key-up3',
   template: `
@@ -46,6 +50,8 @@ export class KeyUpComponent_v2 {
 export class KeyUpComponent_v3 {
   values = '';
 }
+
+//////////////////////////////////////////
 
 @Component({
   selector: 'key-up4',
